@@ -9,4 +9,4 @@ RUN apt-get update && \
     sqlite3 \
     wget \
     curl
-CMD [ "python","/from /kinter /import /*.py" ] 
+CMD [ "python","from\ tkinter\ import\ \*.py" ] 
