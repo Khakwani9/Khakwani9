@@ -5,5 +5,7 @@ WORKDIR /app
 COPY . .
 RUN apt-get update && apt-get install -y \
     tk \
-    sqlite3
+    sqlite3 \
+    apt-get install -y apt-utils && \
+    apt-get install -y other-packages
 CMD [ "python","/from /kinter /import /*.py" ] 
