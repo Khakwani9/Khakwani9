@@ -3,9 +3,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN=true
 WORKDIR /app
 COPY . .
-RUN apt-get update && apt-get install -y \
-    tk \
+RUN apt-get update && \
+    apt-get install -y \
+    apt-utils \   
     sqlite3 \
-    apt-get install -y apt-utils && \
-    apt-get install -y other-packages
+    wget \
+    curl
 CMD [ "python","/from /kinter /import /*.py" ] 
